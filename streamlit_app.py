@@ -49,6 +49,11 @@ st.dataframe(
     column_config={"year": st.column_config.TextColumn("Year")},
 )
 
+
+chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["year", "popularity"])
+
+st.bar_chart(chart_data)
+
 # Display the data as an Altair chart using `st.altair_chart`.
 df_chart = pd.melt(
     df_reshaped.reset_index(), id_vars="year", var_name="genre", value_name="gross"
@@ -65,6 +70,3 @@ chart = (
 )
 st.altair_chart(chart, use_container_width=True)
 
-chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["year", "popularity"])
-
-st.bar_chart(chart_data)
