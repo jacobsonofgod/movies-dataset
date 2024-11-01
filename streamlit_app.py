@@ -64,3 +64,7 @@ chart = (
     .properties(height=320)
 )
 st.altair_chart(chart, use_container_width=True)
+
+chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["year", "popularity"])
+
+st.bar_chart(chart_data)
