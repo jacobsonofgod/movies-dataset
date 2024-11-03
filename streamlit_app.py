@@ -50,9 +50,9 @@ st.dataframe(
 )
 
 
-chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["year", "popularity"])
+# jtesting
 
-st.bar_chart(chart_data)
+st.bar_chart(df_reshaped,x="genre",y="years")
 
 # Display the data as an Altair chart using `st.altair_chart`.
 df_chart = pd.melt(
