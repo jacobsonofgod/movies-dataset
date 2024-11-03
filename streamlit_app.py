@@ -24,6 +24,8 @@ def load_data():
 
 df = load_data()
 
+st.table(df)
+
 # Show a multiselect widget with the genres using `st.multiselect`.
 genres = st.multiselect(
     "Genres",
